@@ -1,0 +1,95 @@
+:root{
+	--page-bg-color: #a1b6c4;
+	--nav-bg-color: #daedda;
+	--nav-link-color: #db190b;
+	--nav-font-color: black;
+	--main-bg-color: #d5e0a4;
+	--task-bg-color: #FFFF88;
+	--task-font-size: 30px;
+	--task-font-color: black;
+	--footer-font-color:#f3f5e9;
+	--footer-bg-color: #55207a;
+}
+
+html, body {
+	background-color: var(--page-bg-color);
+	margin: 0;
+	padding: 0;
+}
+
+header[class = "nav"]{
+	margin: 0;
+	padding: 0;
+	width:100%;
+}
+
+header[class = "nav"], ul{
+	margin: 0;
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
+header[class = "nav"], ul, li{
+	float: right;	
+}
+header[class = "nav"], img{
+	float: left;	
+}
+
+header[class = "nav"], ul, li{
+	display: block;
+	padding: 5px;
+	background-color: var(--nav-bg-color);
+	color: var(--nav-font-color);
+
+}
+
+header[class = "nav"] a{
+	color: var(--nav-link-color);
+	
+}
+
+
+
+#mainBlock {
+	width: 40%;
+	margin:auto;
+	background-color: var(--main-bg-color);
+	align-content: center;
+	font-size: var(--task-font-size);
+	
+}
+
+button{
+	background-color: #009cde;
+	border: none;
+	color: black;
+	font-weight: bold;
+	padding: 4px 8px;
+	text-align: center;
+	font-size: 16px;
+	margin: 4px 2px;
+	opacity: 0.6;
+	transition: 0.3s;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+
+
+.task-item-editable{
+	width: 80%;
+	margin:auto;
+	background-color: var(--task-bg-color);
+	color: var(--task-font-color);
+}
+
+
+footer{
+	margin: 0;
+	padding: 0;
+	background-color: var(--footer-bg-color);
+	width:100%;
+	color: var(--footer-font-color);
+}

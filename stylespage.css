@@ -1,0 +1,81 @@
+img {
+    width: 300px;
+    height: 150px;
+}
+
+html, body {
+    height: 100%;
+    margin: 10px 10px 10px 10px;
+}
+
+.pageheading {
+    display: grid;
+    height: 150px;
+    background-color: white;
+    grid-template-columns: 35% 50% 15%;
+    grid-template-areas: 
+    'nav titleBlock nav_links';
+}
+.grid-container {
+    display: grid;
+    height: inherit;
+    background-color: #EFEFEF;
+    grid-template-columns: 35% 65%;
+    grid-template-areas: 
+    'mainBlock mainBlock';
+    padding: 10px;
+}
+nav {
+    text-align: right;
+}
+
+.nav_links li.active a{color: black;}
+.nav_links li:hover a {color: black;}
+.nav_links li:hover {background-color: white;}
+
+button > li {
+    background-color: #FF3B3F;
+    font-size: 15px;
+}
+
+div.titleBlock {
+    text-align: left;
+    font-size: 60px;
+    font-family : helvetica;
+}
+
+#mainBlock, #menuBlock {
+    border: 5px solid black;
+    background-color: #EFEFEF;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    overflow: hidden;
+	overflow-y: scroll;
+}
+
+.edit-task {
+	justify-content: center;
+	align-content: center;
+	border-radius: 10px;
+	width: 20px;
+	height: 20px;
+	background-color: #bbb;
+}
+
+footer {
+    color: black;
+    background-color: #EFEFEF;
+    text-align: right;
+}
+
+mark {
+    font-size: 20px;
+    background-color: #EFEFEF;
+}
+
+footer > mark {
+    font-size: 15px;
+    background-color: #CAEBF2;
+    text-align: right;
+}

@@ -1,0 +1,217 @@
+:root{
+	--page-bg-color: #a1b6c4;
+	--nav-bg-color: #daedda;
+	--nav-link-color: #FF3B3F;
+	--nav-font-color: black;
+	--main-bg-color: #d5e0a4;
+	--task-bg-color: #FFFF88;
+	--task-font-size: 30px;
+	--task-font-color: black;
+	--footer-font-color:#373834;
+	--footer-bg-color: #283b31;
+	--img-background-color:#FFFF88;
+	--menu-area-bg-color: #12b548;
+}
+
+img {
+	background-color: var(--img-background-color);
+	border-radius: 5px;
+}
+
+#indexBody{
+	font-size:30px;
+
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.col-0 {width: 0%;}
+.col-1 {width: 6.25%;}
+.col-2 {width: 12.5%;}
+.col-3 {width: 18.75%;}
+.col-4 {width: 25%;}
+.col-5 {width: 31.25%;}
+.col-6 {width: 37.5%;}
+.col-7 {width: 43.75%;}
+.col-8 {width: 50%;}
+.col-9 {width: 56.25%;}
+.col-10 {width: 62.25%;}
+.col-11 {width: 68.75%;}
+.col-12 {width: 75%;}
+.col-13 {width: 81.25%;}
+.col-14 {width: 87.5%;}
+.col-15 {width: 93.75%;}
+.col-16 {width: 100%;}
+
+
+
+
+
+html, body {
+	background-color: var(--page-bg-color);
+	overflow-x:hidden;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+header[class = "nav"]{
+	background-color:var(--nav-bg-color);
+	margin: 0;
+	padding: 0;
+	width:100%;
+}
+
+.nav_links{
+	display: inline-block;
+	list-style-type: none;
+}
+
+.nav_links li.active a{color: black;}
+.nav_links li:hover a {color: black;}
+.nav_links li:hover {background-color: white;}
+
+
+header[class = "nav"], img{
+	float: left;	
+}
+
+.nav_links, li{
+	float: right;
+	display: inline-block;
+	align-content: center;
+	color: var(--nav-font-color);
+
+}
+
+
+.nav_links a{
+	padding: 5px;
+	margin-right:10px; 
+	color: var(--nav-link-color);
+	
+}
+
+#dashboardBody{
+    display: grid;
+    height: inherit;
+    background-color: #EFEFEF;
+    grid-template-rows: 7% 86% 7%;
+    grid-template-areas:
+    'header'
+    'buttonArea'
+    'footer';
+}
+.buttonArea{
+	display: grid;
+    height: 75%;
+    background-color: #EFEFEF;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'toDoListButton habitTrackerButton';
+}
+#toDoListButton, #habitTrackerButton{
+	margin: auto;
+	height: inherit;
+	width: 50%;
+}
+
+
+
+.grid-container {
+    display: grid;
+    height: inherit;
+    background-color: #EFEFEF;
+    grid-template-rows: 7% 86% 7%;
+    grid-template-areas:
+    'header'
+    'mainBlock'
+    'footer';
+}
+.mainBlock{
+	display:grid;
+	grid-template-columns: 30% 70%;
+	grid-template-areas: 'listContainer taskContainer';
+}
+
+.taskContainer{
+	display: grid;
+    height: inherit;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+    'h1'
+	'taskArea';
+}
+.listContainer{
+	display: grid;
+    height: inherit;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+    'h2'
+	'listArea';
+	
+}
+h1,h2{
+	text-align: center;
+}
+
+#listArea, #taskArea {
+	width: 75%;
+	height:90%;
+	margin:auto;
+
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: var(--menu-area-bg-color);
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    overflow: hidden;
+	
+	box-shadow: -5px 0 15px 7px #aaa;
+}
+#listScroll, #taskScroll{
+	overflow-y: scroll;
+}
+
+button{
+	background-color: #009cde;
+	border: none;
+	color: black;
+	font-weight: bold;
+	padding: 4px 8px;
+	text-align: center;
+	font-size: 16px;
+	margin: 4px 2px;
+	opacity: 0.6;
+	transition: 0.3s;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+
+
+.task-item-editable{
+	width: 80%;
+	margin:auto;
+	background-color: var(--task-bg-color);
+	color: var(--task-font-color);
+}
+
+
+footer{
+	grid-area: "footer";
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: 0;
+	/*background-color: var(--footer-bg-color);*/
+	width:100%;
+	color: var(--footer-font-color);
+	text-align: right;
+}
